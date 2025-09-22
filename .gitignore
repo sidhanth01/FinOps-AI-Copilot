@@ -1,0 +1,17 @@
+# Python Bytecode and Cache
+__pycache__/
+*.pyc
+
+# Virtual Environments (If created locally)
+venv/
+.venv
+
+# Configuration and Secrets (CRITICAL for security)
+.env                     # Contains your private GROQ_API_KEY and SECRET_KEY
+.vscode/                 # IDE-specific settings (personal preferences)
+
+# Generated Data and Database Files
+# These are generated at runtime and should NOT be pushed.
+sql_app.db               # The primary SQLite database file
+*.sqlite                 # Catch any other SQLite files
+chroma_db/               # The entire vector store directory (large embeddings)

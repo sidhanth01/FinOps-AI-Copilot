@@ -1,0 +1,28 @@
+# Git and IDE files
+.git
+.gitignore
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Python compiled files and environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.venv
+
+# Dependency installation cache (usually not needed if using multi-stage build, but good to include)
+pip-cache/
+
+# Local data and log files
+*.log
+*.sqlite3 
+data/
+logs/
+
+# Docker build artifacts 
+Dockerfile
+.dockerignore
