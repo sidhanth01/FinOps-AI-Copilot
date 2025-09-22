@@ -9,13 +9,13 @@ The solution demonstrates a complete, end-to-end stack, meeting high standards f
 ***
 
 ## 📖 Table of Contents
-1. [Motivation & Features](#motivation--features)
-2. [Architecture & Decisions](#architecture--design-decisions)
-3. [Installation & Setup](#installation--setup)
-4. [Usage & Verification](#usage--verification)
-5. [Project Structure](#project-structure)
-6. [Testing & Evaluation](#testing--evaluation)
-7. [Future Work](#future-work)
+1. Motivation & Features
+2. Architecture & Design Decisions
+3. Installation & Setup
+4. Usage & Verification
+5. Project Structure
+6. Testing & Evaluation
+7. Contact Support
 
 ***
 
