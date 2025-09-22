@@ -2,9 +2,9 @@
 
 ## Overview & Project Goal
 
-This project implements an **AI-native analytics application** designed to empower a FinOps analyst. [cite_start]The core tool ingests synthetic cloud usage data, computes essential Key Performance Indicators (KPIs) [cite: 20][cite_start], and provides **actionable, data-grounded recommendations** through a low-latency Retrieval-Augmented Generation (RAG) chatbot[cite: 2, 6].
+This project implements an **AI-native analytics application** designed to empower a FinOps analyst. [cite_start]The core tool ingests synthetic cloud usage data, computes essential Key Performance Indicators (KPIs) , and provides **actionable, data-grounded recommendations** through a low-latency Retrieval-Augmented Generation (RAG) chatbot.
 
-[cite_start]The solution demonstrates a complete, end-to-end stack, meeting high standards for architecture, testing, and AI integration[cite: 40].
+The solution demonstrates a complete, end-to-end stack, meeting high standards for architecture, testing, and AI integration.
 
 ***
 
@@ -27,12 +27,12 @@ As cloud spending continues to grow, FinOps analysts need automated tools to qui
 ### Implemented Features
 | Feature Category | Deliverables |
 | :--- | :--- |
-| **ETL & Data** | Ingestion of 3–6 months of synthetic cloud spend data[cite: 64]. Quality checks implemented for nulls and negative costs[cite: 21]. |
-| **KPI & Analytics** | Calculates monthly spend, trend vs. last month, savings opportunities, and top 5 cost drivers[cite: 20]. |
-| **AI/RAG** | RAG over custom data and `finops_tips.md` using Ollama (Mistral) / LangChain / ChromaDB[cite: 23, 24, 52]. |
-| **Recommendations** | Implements the **Sudden unit-cost increase** heuristic [cite: 31] to generate 1–3 specific next steps. |
-| **DevOps** | Fully containerized with `Dockerfile` and `docker-compose.yml`, runs locally with one command[cite: 40, 62]. |
-| **Code Quality** | **4 passing unit tests** for ETL, KPI, and API validation[cite: 42]. |
+| **ETL & Data** | Ingestion of 3–6 months of synthetic cloud spend data. Quality checks implemented for nulls and negative costs. |
+| **KPI & Analytics** | Calculates monthly spend, trend vs. last month, savings opportunities, and top 5 cost drivers. |
+| **AI/RAG** | RAG over custom data and `finops_tips.md` using Ollama (Mistral) / LangChain / ChromaDB. |
+| **Recommendations** | Implements the **Sudden unit-cost increase** heuristic  to generate 1–3 specific next steps. |
+| **DevOps** | Fully containerized with `Dockerfile` and `docker-compose.yml`, runs locally with one command. |
+| **Code Quality** | **4 passing unit tests** for ETL, KPI, and API validation. |
 
 ***
 
@@ -42,10 +42,10 @@ The application is built on a modular microservices-inspired architecture.
 
 | Component | Technology | Rationale and Key Decisions (Trade-Offs) |
 | :--- | :--- | :--- |
-| **Data Layer** | **SQLite** (File-based) | Chosen for **simplicity and rapid deployment** over PostgreSQL[cite: 16], fitting the local demo constraint. |
-| **Backend API** | **FastAPI** (Python) | Provides high-performance, asynchronous endpoints (`/api/kpi`, `/api/ask`)[cite: 34]. |
-| **RAG/LLM** | **Ollama (Mistral)** + **LangChain** | Uses a local open-source model via Ollama [cite: 52] for fully private, contained inference. |
-| **Vector Store** | **ChromaDB** | Simple, file-based vector store [cite: 51] integrated via LangChain to index both data and knowledge. |
+| **Data Layer** | **SQLite** (File-based) | Chosen for **simplicity and rapid deployment** over PostgreSQL, fitting the local demo constraint. |
+| **Backend API** | **FastAPI** (Python) | Provides high-performance, asynchronous endpoints (`/api/kpi`, `/api/ask`). |
+| **RAG/LLM** | **Ollama (Mistral)** + **LangChain** | Uses a local open-source model via Ollama  for fully private, contained inference. |
+| **Vector Store** | **ChromaDB** | Simple, file-based vector store  integrated via LangChain to index both data and knowledge. |
 
 ***
 
@@ -80,7 +80,7 @@ The application is built on a modular microservices-inspired architecture.
 | :--- | :--- | :--- |
 | `GROQ_API_KEY` | `.env` | Placeholder (not used, but good for future work). |
 | `OLLAMA_BASE_URL` | `.env` | Must be set to `http://host.docker.internal:11434` for container-to-host communication. |
-| `NUM_RECORDS`, `MONTHS_HISTORY` | `app/ingestion.py` | Customize the size and temporal window of the synthetic dataset[cite: 64]. |
+| `NUM_RECORDS`, `MONTHS_HISTORY` | `app/ingestion.py` | Customize the size and temporal window of the synthetic dataset. |
 
 ***
 
@@ -95,8 +95,8 @@ Use these queries to demonstrate RAG functionality and grounding:
 
 | Query | Expected Behavior |
 | :--- | :--- |
-| **"What was total spend in May? Break it down by service."** | Retrieves synthetic billing data and generates a detailed breakdown, showing data grounding[cite: 65]. |
-| **"Why did spend increase vs April? Show top 5 contributors."** | Checks the calculated trend and uses the top 5 cost drivers to explain the change[cite: 66]. |
+| **"What was total spend in May? Break it down by service."** | Retrieves synthetic billing data and generates a detailed breakdown, showing data grounding. |
+| **"Why did spend increase vs April? Show top 5 contributors."** | Checks the calculated trend and uses the top 5 cost drivers to explain the change. |
 | **"What are some recommendations for cost optimization?"** | Retrieves text chunks from `data/finops_tips.md` and formats the answer with actionable steps. |
 | **"I see my EC2 costs have spiked. What should I do?"** | Triggers the recommendation heuristic and provides specific next steps (1–3 actions). |
 
