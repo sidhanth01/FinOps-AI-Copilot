@@ -61,7 +61,7 @@ The application is built on a modular microservices-inspired architecture.
 ### Steps
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/sidhanth01/FinOps-AI-Copilot](https://github.com/sidhanth01/FinOps-AI-Copilot)
+    git clone https://github.com/sidhanth01/FinOps-AI-Copilot
     cd FinOps-AI-Copilot
     ```
 2.  **Configure Secrets (`.env.example` $\to$ `.env`)**:
