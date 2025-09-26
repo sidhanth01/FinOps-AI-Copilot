@@ -8,6 +8,10 @@ The solution demonstrates a complete, end-to-end stack, meeting high standards f
 
 ***
 
+
+https://github.com/user-attachments/assets/581a379a-81d7-45f1-9639-6072abe0abb7
+
+
 ## 📖 Table of Contents
 1. Motivation & Features
 2. Architecture & Design Decisions
